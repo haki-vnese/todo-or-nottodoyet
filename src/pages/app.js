@@ -1,6 +1,6 @@
-import {createSideBar} from '../components/sidebar';
-import {createHeader} from '../components/header';
-import {createMain} from '../components/main';
+import {createSideBar} from '../components/sidebar.js';
+import {createHeader} from '../components/header.js';
+import {createTaskList} from '../components/taskList.js';
 
 export function loadApp() {
     const app = document.getElementById('app');

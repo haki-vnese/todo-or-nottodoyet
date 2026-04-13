@@ -1,4 +1,4 @@
-export function createHeader {
+export function createHeader() {
     const header = document.createElement('header');
     header.classList.add('page-header');
 
