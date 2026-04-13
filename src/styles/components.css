@@ -1,0 +1,25 @@
+.page-header {
+    margin-bottom: 24px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+    color: #333;
+}  
+
+.side-bar h2 {
+    margin-bottom: 16px;
+}
+
+.side-bar li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.task-list {
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+}

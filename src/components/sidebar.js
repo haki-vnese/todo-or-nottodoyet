@@ -2,6 +2,9 @@ export function createSideBar() {
     const sideBar = document.createElement('div');
     sideBar.classList.add('side-bar');
 
+    const title = document.createElement('h2');
+    title.textContent = 'Menu';
+
     const nav = document.createElement('nav');
 
     const list = document.createElement('ul');
@@ -13,6 +16,7 @@ export function createSideBar() {
         list.appendChild(li);
     });
 
+    nav.appendChild(title);
     nav.appendChild(list);
     sideBar.appendChild(nav);
 
