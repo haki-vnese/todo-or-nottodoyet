@@ -20,7 +20,7 @@ export function addTask(title) {
         id: Date.now(),
         title,
         completed: false,
-        projectId: null,
+        projectId: state.selectedProjectId,
     };
     state.tasks.push(newTask);
 }

@@ -34,3 +34,12 @@ export function getUnusedColor() {
 
     return COLORS[Math.floor(Math.random() * COLORS.length)];
 }
+
+export function addProject(name) {
+    const newProject = {
+        id: Date.now(),
+        name,
+        color: getUnusedColor(),
+    };
+    state.projects.push(newProject);
+}

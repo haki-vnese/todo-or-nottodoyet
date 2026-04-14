@@ -37,7 +37,7 @@
     font-weight: 500;
     padding: 6px 8px;
     border-radius: 8px;
-    }
+}
 
 .add-task-btn:hover {
   background-color: var(--primary-color);
@@ -69,6 +69,47 @@
 }
 
 .add-task-btn:hover .add-task-text {
+    color: white;
+}
+
+.add-project-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    color: var(--muted-text);
+    font-weight: 500;
+    padding: 6px 8px;
+    border-radius: 8px;
+}
+
+.add-project-btn:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.add-project-btn .add-project-icon {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background-color: var(--muted-text);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.add-project-btn:hover .add-project-icon {
+    background-color: var(--primary-color);
     color: white;
 }
 

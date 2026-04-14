@@ -1,4 +1,5 @@
 import { createAddTask } from './addTask.js';
+import { createAddProject } from './addProject.js';
 import { state } from '../modules/state.js';
 import { renderTaskList } from './taskList.js';
 import { renderHeader } from './header.js';
@@ -9,10 +10,12 @@ export function createSideBar() {
     sideBar.id = 'side-bar';
 
     const addTask = createAddTask();
+    const addProject = createAddProject();
 
     const nav = document.createElement('nav');
     const list = document.createElement('ul');
 
+    // Inbox section
     const inboxItem = document.createElement('li');
     inboxItem.textContent = 'Inbox';
     inboxItem.classList.add('sidebar-item');
@@ -28,6 +31,7 @@ export function createSideBar() {
         renderSideBar();
     });
 
+    // Today and upcoming sections
     const todayItem = document.createElement('li');
     todayItem.textContent = 'Today';
     todayItem.classList.add('sidebar-item');
@@ -39,6 +43,7 @@ export function createSideBar() {
     list.append(inboxItem, todayItem, upcomingItem);
     nav.appendChild(list);
 
+    // Projects section
     const projectsSection = document.createElement('div');
     projectsSection.classList.add('projects-section');
 
@@ -52,6 +57,7 @@ export function createSideBar() {
         const li = document.createElement('li');
         li.classList.add('sidebar-item');
 
+        // Highlight selected project
         if (state.selectedProjectId === project.id) {
             li.classList.add('active');
         }
@@ -65,7 +71,7 @@ export function createSideBar() {
         text.textContent = project.name;
 
         li.append(icon, text);
-
+        // Add click event to select project
         li.addEventListener('click', () => {
             state.selectedProjectId = project.id;
             renderHeader();
@@ -78,7 +84,7 @@ export function createSideBar() {
 
     projectsSection.appendChild(projectsList);
 
-    sideBar.append(addTask, nav, projectsSection);
+    sideBar.append(addTask, addProject, nav, projectsSection);
 
     return sideBar;
 }

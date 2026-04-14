@@ -1,5 +1,6 @@
 import { addTask } from '../modules/tasks.js';
 import { renderTaskList } from './taskList.js';
+import { state } from '../modules/state.js';
 
 export function createAddTask() { // Create add task button
     
@@ -32,7 +33,12 @@ function openAddTaskModal() {
 
     const title = document.createElement('h2');
     title.classList.add('modal-title');
-    title.textContent = 'Add Task';
+    if (state.selectedProjectId === null) {
+        title.textContent = 'Add Task to Inbox';
+    } else {
+        const project = state.projects.find(p => p.id === state.selectedProjectId);
+        title.textContent = `Add Task to ${project ? project.name : 'Project'}`;
+    }
 
     const input = document.createElement('input');
     input.type = 'text';
