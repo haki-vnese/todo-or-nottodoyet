@@ -15,3 +15,12 @@ export function deleteTask(taskId) {
     state.tasks = state.tasks.filter(task => task.id !== taskId);
 }
 
+export function addTask(title) {
+    const newTask = {
+        id: Date.now(),
+        title,
+        completed: false,
+        projectId: null,
+    };
+    state.tasks.push(newTask);
+}

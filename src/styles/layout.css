@@ -4,8 +4,8 @@
   min-height: 100vh;
 }
 
-.sidebar {
-  padding: 24px;
+.side-bar {
+  padding: 32px;
   border-right: 1px solid #ddd;
   background-color: #ffffff;
 }
