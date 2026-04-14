@@ -72,6 +72,27 @@
     color: white;
 }
 
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: var(--text-color);
+}
+
+.sidebar-item:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.sidebar-item.active {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
 .modal-overlay {
     position: fixed;
     inset: 0;

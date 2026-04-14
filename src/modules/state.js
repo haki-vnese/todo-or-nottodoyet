@@ -24,19 +24,19 @@ export const state = {
       id: 1,
       title: 'Finish Webpack setup',
       completed: false,
-      projectId: null,
+      projectId: 1,
     },
     {
       id: 2,
       title: 'Build Todo UI',
       completed: false,
-      projectId: null,
+      projectId: 1,
     },
     {
       id: 3,
       title: 'Connect Supabase',
       completed: false,
-      projectId: null,
+      projectId: 1,
     },
   ],
 };
